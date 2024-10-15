@@ -7,7 +7,7 @@ module.exports = {
     name: "hack",
     author: "jun",
     countDown: 5,
-    role: 0,
+    role: 2,
     category: "fun",
     shortDescription: {
       en: "Generates a 'hacking' image with the user's profile picture.",
@@ -44,8 +44,8 @@ module.exports = {
   },
 
   onStart: async function ({ args, usersData, threadsData, api, event }) {
-    let pathImg = __dirname + "/cache/background.png";
-    let pathAvt1 = __dirname + "/cache/Avtmot.png";
+    let pathImg = __dirname + "/tmp/background.png";
+    let pathAvt1 = __dirname + "/tmp/Avtmot.png";
     var id = Object.keys(event.mentions)[0] || event.senderID;
     var name = await api.getUserInfo(id);
     name = name[id].name;
@@ -82,7 +82,7 @@ module.exports = {
     fs.removeSync(pathAvt1);
     return api.sendMessage(
       {
-        body: " ",
+        body: "✅ 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙃𝙖𝙘𝙠𝙚𝙙 𝙏𝙝𝙞𝙨 𝙐𝙨𝙚𝙧! My Lord, Please Check Your Inbox.",
         attachment: fs.createReadStream(pathImg),
       },
       event.threadID,
