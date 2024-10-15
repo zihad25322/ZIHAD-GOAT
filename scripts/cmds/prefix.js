@@ -1,55 +1,59 @@
-const fs = require("fs-extra");
-const { utils } = global;
-
-module.exports = {
-	config: {
-		name: "prefix",
-		version: "1.4",
-		author: "NTKhang",
-		countDown: 5,
-		role: 0,
-		description: "Thay đổi dấu lệnh của bot trong box chat của bạn hoặc cả hệ thống bot (chỉ admin bot)",
-		category: "config",
-		guide: {
-		
-module.exports.languages = {
-  "vi": {},
-  "en": {}
+const dipto = require('axios');
+const fs = require('fs-extra');
+const path = require('path');
+const moment = require('moment-timezone');
+const pathFile = __dirname + '/cache/d1pt0.txt';
+if (!fs.existsSync(pathFile))
+  fs.writeFileSync(pathFile, 'true');
+  const isEnable = fs.readFileSync(pathFile, 'utf-8');
+module.exports.config = {
+  name: "prefix",
+  version: "1.0.0",
+  permission: 2,
+  credits: "★𝐌𝟗𝐇𝟒𝐌𝐌𝟒𝐃-𝐁𝟒𝐃𝟗𝐋★",
+  prefix:true,
+  description: "when send ,prefix then response",
+  category: "bot prefix",
+  usages: "prefix",
+  cooldowns: 5,
 };
-
-function random(arr) {
-var rd = arr[Math.floor(Math.random() * arr.length)];
-    return rd;
-        };
-module.exports.handleEvent = async function ({ api, event, Threads }) {
-  const axios = require("axios")
-  const picture = (await axios.get(`https://i.imgur.com/TQeipJV.jpeg`, { responseType: "stream"})).data
-      const moment = require("moment-timezone");
-var gio = moment.tz("Asia/Dhaka").format("hh:mm:ss || D/MM/YYYY");
-  var thu =
-moment.tz('Asia/Dhaka').format('dddd');
-  if (thu == 'Sunday') thu = 'রবিবার'
-  if (thu == 'Monday') thu = 'সোমবার'
-  if (thu == 'Tuesday') thu = 'মঙ্গলবার'
-  if (thu == 'Wednesday') thu = 'বুধবার'
-  if (thu == "Thursday") thu = 'বৃহস্পতিবার'
-  if (thu == 'Friday') thu = 'শুক্রবার'
-  if (thu == 'Saturday') thu = 'শনিবার'
-  var { threadID, messageID, body } = event,{ PREFIX } = global.config;
-  let threadSetting = global.data.threadData.get(threadID) || {};
-  let prefix = threadSetting.PREFIX || PREFIX;
-  const icon = [""];
-  if (body.toLowerCase() == "prefix" || (body.toLowerCase() == "Prefix") ||  (body.toLowerCase() == "PREFIX") || (body.toLowerCase() == "PreFix")) {
-       api.sendMessage({body: `💐 ====『 𝗣𝗥𝗘𝗙𝗜𝗫 』==== 💐\n━━━━━━━━━━━━━━━━━━━\n[⏰] → 𝐃𝐚𝐭𝐚 𝐀𝐧𝐝 𝐓𝐢𝐦𝐞: ${gio} (${thu})\n[❤️] → 𝐁𝐨𝐭 𝐏𝐫𝐞𝐟𝐢𝐱: [ ${global.config.PREFIX} ]\n━━━━━━━━━━━━━━━━━━━\n[💥] → 𝐁𝐨𝐭 𝐡𝐚𝐬 𝐚 𝐩𝐨𝐬𝐬𝐢𝐛𝐥𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 ${client.commands.size} \n[👥] → 𝐓𝐨𝐭𝐚𝐥 𝐁𝐨𝐭 𝐔𝐬𝐞𝐫𝐬: ${global.data.allUserID.length}\n[🏘️] → 𝐓𝐨𝐭𝐚𝐥 𝐆𝐫𝐨𝐮𝐩: ${global.data.allThreadID.length}\n━━━━━━━━━━━━━━━━━━━\n[👉] → 𝐓𝐡𝐢𝐬 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐓𝐨 𝐒𝐞𝐞 𝐂𝐨𝐦𝐦𝐨𝐧𝐥𝐲 𝐔𝐬𝐞𝐝 ${global.config.PREFIX} 𝐇𝐞𝐥𝐩.`, attachment: (await axios.get((await axios.get(`https://imran-api.onrender.com/video/crush`)).data.data, {
-                    responseType: 'stream'
-                })).data}, event.threadID, (err, info) => {
-    global.client.handleReaction.push({
-      name: this.config.name, 
-      messageID: info.messageID,
-      author: event.senderID,
-    })
-      },event.messageID);
+module.exports.handleEvent = async ({ api, event }) => {
+  if (isEnable == "true"){
+  const dipto2 = event.body ? event.body.toLowerCase() : '';
+    const GP = "🤍✨𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗✨🤍";
+     let d1PInfo = await api.getThreadInfo(event.threadID);
+  let diptoName = d1PInfo.threadName;
+    var time = moment.tz("Asia/Dhaka").format("LLLL");
+  const text = `╭•┄┅═══❁🌺❁═══┅┄•╮\n${GP}\n╰•┄┅═══❁🌺❁═══┅┄•╯\n\n𝐁𝐎𝐓 𝐍𝐀𝐌𝐄 : ${global.config.BOTNAME}\n𝐑𝐎𝐁𝐎𝐓 𝐏𝐑𝐄𝐅𝐈𝐗 : ｢ ${global.config.PREFIX} ｣\n𝐑𝐎𝐁𝐎𝐓 𝐂𝐌𝐃: ｢ ${client.commands.size} ｣\n𝐓𝐈𝐌𝐄 : ${time}\n𝐆𝐑𝐎𝐔𝐏 𝐍𝐀𝐌𝐄: ${diptoName}\n`
+  //const text2 = text[Math.floor(Math.random() * text.length)];
+const imgur = ["https://i.imgur.com/F7mN8WH.jpeg"]
+  const link = imgur[Math.floor(Math.random() * imgur.length)];
+  const res = await dipto.get(link, { responseType: 'arraybuffer' })
+const ex = path.extname(link);
+  const filename = __dirname + `/cache/dipto3${ex}`;
+  fs.writeFileSync(filename, Buffer.from(res.data, 'binary'));
+  if (dipto2.indexOf("prefix") ===0|| dipto2.indexOf("Prefix") ===0 )
+  {
+api.sendMessage({body:`${text}`,attachment: fs.createReadStream(filename)},event.threadID,() => fs.unlinkSync(filename),event.messageID)
   }
  }
-//ko api thì attachment: (picture)}, event.threadID, event.messageID);
-module.exports.run = async ({ api, event, args, Threads }) => {}
+}
+module.exports.run = async ({api,args, event}) => {
+try {
+  if (args[0] == 'on') {
+    fs.writeFileSync(pathFile, 'true');
+    api.sendMessage('no prefix on successfully', event.threadID, event.messageID);
+  }
+  else if (args[0] == 'off') {
+    fs.writeFileSync(pathFile, 'false');
+    api.sendMessage('no prefix off successfully', event.threadID, event.messageID);
+  }
+  else if (!args[0]){
+    api.sendMessage(`Wrong format ${this.config.name}use off/on`, event.threadID, event.messageID);
+  }
+  }
+  catch(e) {
+    console.log(e);
+  }
+
+	}
