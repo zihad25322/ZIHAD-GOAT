@@ -8,7 +8,7 @@ const baseApiUrl = async () => {
 };
 module.exports = {
   config: {
-    name: "song",
+    name: "sing",
     version: "1.1.5",
     aliases: [ "music", "play"],
     author: "dipto",
@@ -116,4 +116,4 @@ async function diptoSt(url,pathName) {
   catch (err) {
     throw err;
   }
-}
+                                      }
