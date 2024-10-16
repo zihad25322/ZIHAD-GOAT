@@ -28,7 +28,7 @@ config: {
 
     var badol = Messages[Math.floor(Math.random() * Messages.length)]
   
-  if (event.body.indexOf("Bot2") == 0 || (event.body.toLowerCase() == "bot2") || (event.body.indexOf("বট2") == 0)) {
+  if (event.body.indexOf("Bot") == 0 || (event.body.toLowerCase() == "bot") || (event.body.indexOf("বট") == 0)) {
     var msg = {
       body: ` ${badol}`
     }
