@@ -34,9 +34,9 @@ module.exports = {
         hour12: true,
       });
 
-      const img = `https://graph.facebook.com/100065050393649/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
+      const img = `https://graph.facebook.com/100065506668822/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
 
-      const msg = `╔╝❮${name}❯╚╗\𝗔𝗗𝗠𝗜𝗡 𝗔𝗡𝗗 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡\n━━━━━━━━━━━━━━━━━━━━━━\n𝗡𝗔𝗠𝗘: 𝗠𝗗 𝗝𝗨𝗕𝗔𝗘𝗗 𝗔𝗛𝗠𝗘𝗗 𝗝𝗢𝗬\n𝐑𝐄𝐋𝐈𝐆𝐈𝐎𝐍: 𝐈𝐒𝐋𝐀𝐌\n𝐀𝐃𝐃𝐑𝐄𝐒𝐒: 𝗧𝗔𝗥𝗔𝗞𝗔𝗡𝗗𝗜, 𝗦𝗔𝗥𝗜𝗦𝗛𝗔𝗕𝗔𝗥𝗜, 𝗝𝗔𝗠𝗔𝗟𝗣𝗨𝗥\n𝐆𝐄𝐍𝐃𝐄𝐑: 𝐌𝐀𝐋𝐄\n𝐀𝐆𝐄: 16\n𝐑𝐄𝐋𝐀𝐓𝐈𝐎𝐍𝐒𝐇𝐈𝐏: 𝗦𝗜𝗡𝗚𝗟𝗘\n𝐖𝐎𝐑𝐊: 𝗦𝗧𝗨𝗗𝗘𝗡𝗧\n𝐆𝐌𝐀𝐈𝐋: 𝗷𝗼𝘆𝗮𝗵𝗺𝗲𝗱𝘁𝘁@𝗴𝗺𝗮𝗶𝗹.𝗰𝗼𝗺\n𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊: https://www.facebook.com/mdjubaedahmedjoy?mibextid=ZbWKwL \n𝐌𝐀𝐒𝐒𝐄𝐍𝐆𝐄𝐑: m.me/100065050393649\n𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏: wa.me/+8801709045888\n𝐈𝐌𝐎: 01709045888\n𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌: @mdjubaedahmed\n━━━━━━━━━━━━━━━━━━━━━━\n\nBot Prefix: ( . )\nBot Name: 𝗝𝗢𝗬-𝗕𝗢𝗧\ngc Name: ${threadName}\nTime:【 ${date} || ${time} \n━━━━━━━━━━━━━━━━━━━━━━`;
+      const msg = `╔╝❮${name}❯╚╗\𝐀𝗗𝗠𝗜𝗡 𝗔𝗡𝗗 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡\n━━━━━━━━━━━━━━━━━━━━━━\n𝗡𝗔𝗠𝗘: 𝐌𝐎𝐇𝐀𝐌𝐌𝐀𝐃 𝐁𝐀𝐘𝐉𝐈𝐃\n𝐑𝐄𝐋𝐈𝐆𝐈𝐎𝐍: 𝐈𝐒𝐋𝐀𝐌\n𝐀𝐃𝐃𝐑𝐄𝐒𝐒: 𝐊𝐈𝐒𝐇𝐎𝐑𝐄𝐆𝐀𝐍𝐉\n𝐆𝐄𝐍𝐃𝐄𝐑: 𝐌𝐀𝐋𝐄\n𝐀𝐆𝐄: 16\n𝐑𝐄𝐋𝐀𝐓𝐈𝐎𝐍𝐒𝐇𝐈𝐏: 𝗦𝗜𝗡𝗚𝗟𝗘\n𝐖𝐎𝐑𝐊: 𝗦𝗧𝗨𝗗𝗘𝗡𝗧\n𝐆𝐌𝐀𝐈𝐋: 𝐄𝐖𝐑𝐁𝐈𝐉𝐉@𝐆𝐌𝐀𝐈𝐋.𝐂𝐎𝐌\n𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊: https://www.facebook.com/100065506668822 \n𝐌𝐀𝐒𝐒𝐄𝐍𝐆𝐄𝐑: m.me/𝐁𝐀𝐘𝐉𝐈𝐃.500𝐤\n𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏: wa.me/+8801638007072\n𝐈𝐌𝐎: 01638007072\n𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌: @𝐌𝐎𝐇𝐀𝐌𝐌𝐀𝐃𝐁𝐀𝐘𝐉𝐈𝐃\n━━━━━━━━━━━━━━━━━━━━━━\n\nBot Prefix: ( . )\nBot Name: 𝐁𝐀𝐘𝐉𝐈𝐃𓇽𝐊𝐎𝐎𝐊𝐈𝐄\ngc Name: ${threadName}\nTime:【 ${date} || ${time} \n━━━━━━━━━━━━━━━━━━━━━━`;
 
       message.reply({
         body: msg,
