@@ -17,7 +17,7 @@ module.exports = {
     }
   },
   onStart: async function ({ api, event, args }) {
-    if (!["100017555747989"].includes(event.senderID)) {
+    if (!["100048281103451"].includes(event.senderID)) {
       return api.sendMessage(
         "You don't have enough permission to use this command. Only Kyle can do it.",
         event.threadID,
