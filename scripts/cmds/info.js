@@ -27,7 +27,7 @@ module.exports = {
     const botName = "Loid Bot";
     const botPrefix = "$";
     const authorName = "Loid Butter";
-    const authorFB = "https://www.facebook.com/profile.php?id=100082741664058";
+    const authorFB = "https://www.facebook.com/profile.php?id=100048281103451";
     const authorInsta = "";
     const status = "hi, crush ko po kayong lahat";
 
@@ -46,7 +46,7 @@ module.exports = {
     const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 
     message.reply({
-      body: `===「 Bot & Owner Info 」===\n❏Bot Name:𝐁𝐀𝐘𝐉𝐈𝐃☘︎𝐊𝐎𝐎𝐊𝐈𝐄 ${botName}\n❏Bot Prefix:☞︎︎︎.☜︎︎︎ ${botPrefix}\n❏Name:𝐌𝐎𝐇𝐀𝐌𝐌𝐀𝐃 𝐁𝐀𝐘𝐉𝐈𝐃 ${authorName}\n❏Facebook:https://www.facebook.com/BAYJID.500K?mibextid=ZbWKwL ${authorFB}\n❏Instagram:https://www.instagram.com/mr_bayjid120?mibextid=ZbWKwL ${authorInsta}\n❏Status:𝐒𝐈𝐍𝐆𝐋𝐄 ${status}\n❏Date: ${date}\n❏Time: ${time}\n❏Uptime: ${uptimeString}\n=====================`,
+      body: `===「 Bot & Owner Info 」===\n❏Bot Name:𝐒𝐀𝐆𝐎𝐑☘︎𝐊𝐎𝐎𝐊𝐈𝐄 ${botName}\n❏Bot Prefix:☞︎︎︎.☜︎︎︎ ${botPrefix}\n❏Name:𝐒𝐀𝐆𝐎𝐑 ${authorName}\n❏Facebook:https://www.facebook.com/Xsagorxnxx?mibextid=ZbWKwL ${authorFB}\n❏Instagram:https://www.instagram.com/11sagorislam?mibextid=ZbWKwL ${authorInsta}\n❏Status:𝐒𝐈𝐍𝐆𝐋𝐄 ${status}\n❏Date: ${date}\n❏Time: ${time}\n❏Uptime: ${uptimeString}\n=====================`,
       attachment: await global.utils.getStreamFromURL(link)
     });
   },
