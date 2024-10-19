@@ -14,7 +14,7 @@ module.exports = {
 		longDescription: {
 			en: "Get a dark meme, make sure you have a flashlight."
 		},
-		category: "media",
+		category: "fun",
 		guide: {
 			en: "{p}{n}dmeme"
 		}
