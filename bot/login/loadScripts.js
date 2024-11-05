@@ -90,7 +90,7 @@ module.exports = async function (api, threadModel, userModel, dashBoardModel, gl
 							if (!existsSync(`${process.cwd()}/node_modules/${packageName}`)) {
 								const wating = setInterval(() => {
 									// loading.info('PACKAGE', `${spinner[count % spinner.length]} Installing package ${packageName} for ${text} ${file}`);
-									loading.info('PACKAGE', `${spinner[count % spinner.length]}ARYAN Installing package ${colors.yellow(packageName)} for ${text} ${colors.yellow(file)}`);
+									loading.info('PACKAGE', `${spinner[count % spinner.length]} Installing package ${colors.yellow(packageName)} for ${text} ${colors.yellow(file)}`);
 									count++;
 								}, 80);
 								try {
@@ -151,7 +151,7 @@ module.exports = async function (api, threadModel, userModel, dashBoardModel, gl
 				}
 				// ——————————————— CHECK ENV GLOBAL ——————————————— //
 				if (envGlobal) {
-					if (typeof envGlobal != "Bayjid object" || typeof envGlobal == "object" && Array.isArray(envGlobal))
+					if (typeof envGlobal != "object" || typeof envGlobal == "object" && Array.isArray(envGlobal))
 						throw new Error("the value of \"envGlobal\" must be object");
 					for (const i in envGlobal) {
 						if (!configCommands.envGlobal[i]) {
@@ -215,7 +215,7 @@ module.exports = async function (api, threadModel, userModel, dashBoardModel, gl
 					error
 				});
 			}
-			loading.info(" BAYJID LOADED', `${colors.green(`${commandLoadSuccess}`)}${commandError.length ? `, ${colors.red(`${commandError.length}`)}` : ''}`);
+			loading.info('BAYJID LOADED', `${colors.green(`${commandLoadSuccess}`)}${commandError.length ? `, ${colors.red(`${commandError.length}`)}` : ''}`);
 		}
 		console.log("\r");
 		if (commandError.length > 0) {
