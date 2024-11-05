@@ -1,5 +1,5 @@
 // set bash title
-process.stdout.write("\x1b]2;BAYJID BOTV2 - Made by 𝐌𝐎𝐇𝐀𝐌𝐌𝐀𝐃 𝐁𝐀𝐘𝐉𝐈𝐃\x1b\x5c");
+process.stdout.write("\x1b]2;BAYJID BOTV2 - Made by MOHAMMAD BAYJID\x1b\x5c");
 const defaultRequire = require;
 
 function decode(text) {
@@ -98,7 +98,7 @@ for (const text of title) {
 	const textColor = gradient("#FA8BFF", "#2BD2FF", "#2BFF88")(text);
 	centerText(textColor, text.length);
 }
-let subTitle = `GoatBot V2@${currentVersion}- A simple Bot chat messenger use personal account`;
+let subTitle = `Bayjid Bot V2@${currentVersion}- A simple Bot chat messenger use personal account`;
 const subTitleArray = [];
 if (subTitle.length > maxWidth) {
 	while (subTitle.length > maxWidth) {
@@ -112,7 +112,7 @@ if (subTitle.length > maxWidth) {
 else {
 	subTitleArray.push(subTitle);
 }
-const author = ("Created by NTKhang with ♡");
+const author = ("Created by BAYJID with ♡");
 const srcUrl = ("Source code: https://github.com/Bayjid-09");
 const fakeRelease = ("BAYJID ALL VERSIONS NOT RELEASED HERE ARE FAKE");
 for (const t of subTitleArray) {
@@ -254,13 +254,13 @@ async function getAppStateFromEmail(spin = { _start: () => { }, _stop: () => { }
 				await (async function submitCode(message) {
 					if (message && isExit) {
 						spin._stop();
-						log.error("LOGIN FACEBOOK", message);
+						log.error("BAYJID LOGIN FACEBOOK", message);
 						process.exit();
 					}
 
 					if (message) {
 						spin._stop();
-						log.warn("LOGIN FACEBOOK", message);
+						log.warn("BAYJID LOGIN FACEBOOK", message);
 					}
 
 					if (facebookAccount["2FASecret"] && tryNumber == 0) {
@@ -466,7 +466,7 @@ async function getAppStateToLogin(loginWithEmail) {
 				}
 				catch (err) {
 					const error = new Error(`${path.basename(dirAccount)} is invalid`);
-					error.name = "ACCOUNT_ERROR";
+					error.name = "BAYJID-ACCOUNT_ERROR";
 					throw error;
 				}
 				if (appState.some(i => i.name))
@@ -477,7 +477,7 @@ async function getAppStateToLogin(loginWithEmail) {
 					});
 				else if (!appState.some(i => i.key)) {
 					const error = new Error(`${path.basename(dirAccount)} is invalid`);
-					error.name = "ACCOUNT_ERROR";
+					error.name = "BAYJID-ACCOUNT_ERROR";
 					throw error;
 				}
 				appState = appState
@@ -493,7 +493,7 @@ async function getAppStateToLogin(loginWithEmail) {
 			}
 			if (!await checkLiveCookie(appState.map(i => i.key + "=" + i.value).join("; "), facebookAccount.userAgent)) {
 				const error = new Error("Cookie is invalid");
-				error.name = "COOKIE_INVALID";
+				error.name = "BAYJID-COOKIE_INVALID";
 				throw error;
 			}
 		}
@@ -504,13 +504,13 @@ async function getAppStateToLogin(loginWithEmail) {
 			email,
 			password
 		} = facebookAccount;
-		if (err.name === "TOKEN_ERROR")
-			log.err("LOGIN FACEBOOK", getText('login', 'tokenError', colors.green("EAAAA..."), colors.green(dirAccount)));
-		else if (err.name === "COOKIE_INVALID")
-			log.err("LOGIN FACEBOOK", getText('login', 'cookieError'));
+		if (err.name === "BAYJID-TOKEN_ERROR")
+			log.err("BAYJID-LOGIN FACEBOOK", getText('login', 'tokenError', colors.green("EAAAA..."), colors.green(dirAccount)));
+		else if (err.name === "BAYJID-COOKIE_INVALID")
+			log.err("BAYJID-LOGIN FACEBOOK", getText('login', 'cookieError'));
 
 		if (!email || !password) {
-			log.warn("LOGIN FACEBOOK", getText('login', 'cannotFindAccount'));
+			log.warn("BAYJID-LOGIN FACEBOOK", getText('login', 'cannotFindAccount'));
 			const rl = readline.createInterface({
 				input: process.stdin,
 				output: process.stdout
@@ -560,7 +560,7 @@ async function getAppStateToLogin(loginWithEmail) {
 
 			rl.write('\u001B[?25h\n'); // show cursor 
 			clearLines(options.length + 1);
-			log.info("LOGIN FACEBOOK", getText('login', 'loginWith', options[currentOption]));
+			log.info("BAYJID-LOGIN FACEBOOK", getText('login', 'loginWith', options[currentOption]));
 
 			if (currentOption == 0) {
 				email = await input(`${getText('login', 'inputEmail')} `);
@@ -586,8 +586,8 @@ async function getAppStateToLogin(loginWithEmail) {
 			return await getAppStateToLogin();
 		}
 
-		log.info("LOGIN FACEBOOK", getText('login', 'loginPassword'));
-		log.info("ACCOUNT INFO", `Email: ${facebookAccount.email}, I_User: ${facebookAccount.i_user || "(empty)"}`);
+		log.info("BAYJID-LOGIN FACEBOOK", getText('login', 'loginPassword'));
+		log.info("BAYJID-ACCOUNT INFO", `Email: ${facebookAccount.email}, I_User: ${facebookAccount.i_user || "(empty)"}`);
 		spin = createOraDots(getText('login', 'loginPassword'));
 		spin._start();
 
@@ -597,7 +597,7 @@ async function getAppStateToLogin(loginWithEmail) {
 		}
 		catch (err) {
 			spin._stop();
-			log.err("LOGIN FACEBOOK", getText('login', 'loginError'), err.message, err);
+			log.err("BAYJID-LOGIN FACEBOOK", getText('login', 'loginError'), err.message, err);
 			process.exit();
 		}
 	}
@@ -637,7 +637,7 @@ async function startBot(loginWithEmail) {
 	if (global.GoatBot.Listening)
 		await stopListening();
 
-	log.info("LOGIN FACEBOOK", getText('login', 'currentlyLogged'));
+	log.info("BAYJID-LOGIN FACEBOOK", getText('login', 'currentlyLogged'));
 
 	let appState = await getAppStateToLogin(loginWithEmail);
 	changeFbStateByCode = true;
@@ -665,34 +665,34 @@ async function startBot(loginWithEmail) {
 			if (!isNaN(facebookAccount.intervalGetNewCookie) && facebookAccount.intervalGetNewCookie > 0)
 				if (facebookAccount.email && facebookAccount.password) {
 					spin?._stop();
-					log.info("REFRESH COOKIE", getText('login', 'refreshCookieAfter', convertTime(facebookAccount.intervalGetNewCookie * 60 * 1000, true)));
+					log.info("BAYJID-REFRESH COOKIE", getText('login', 'refreshCookieAfter', convertTime(facebookAccount.intervalGetNewCookie * 60 * 1000, true)));
 					setTimeout(async function refreshCookie() {
 						try {
-							log.info("REFRESH COOKIE", getText('login', 'refreshCookie'));
+							log.info("BAYJID-REFRESH COOKIE", getText('login', 'refreshCookie'));
 							const appState = await getAppStateFromEmail(undefined, facebookAccount);
 							if (facebookAccount.i_user)
 								pushI_user(appState, facebookAccount.i_user);
 							changeFbStateByCode = true;
 							writeFileSync(dirAccount, JSON.stringify(filterKeysAppState(appState), null, 2));
 							setTimeout(() => changeFbStateByCode = false, 1000);
-							log.info("REFRESH COOKIE", getText('login', 'refreshCookieSuccess'));
+							log.info("BAYJID-REFRESH COOKIE", getText('login', 'refreshCookieSuccess'));
 							return startBot(appState);
 						}
 						catch (err) {
-							log.err("REFRESH COOKIE", getText('login', 'refreshCookieError'), err.message, err);
+							log.err("BAYJID-REFRESH COOKIE", getText('login', 'refreshCookieError'), err.message, err);
 							setTimeout(refreshCookie, facebookAccount.intervalGetNewCookie * 60 * 1000);
 						}
 					}, facebookAccount.intervalGetNewCookie * 60 * 1000);
 				}
 				else {
 					spin?._stop();
-					log.warn("REFRESH COOKIE", getText('login', 'refreshCookieWarning'));
+					log.warn("BAYJID-REFRESH COOKIE", getText('login', 'refreshCookieWarning'));
 				}
 			spin ? spin._stop() : null;
 
 			// Handle error
 			if (error) {
-				log.err("LOGIN FACEBOOK", getText('login', 'loginError'), error);
+				log.err("BAYJID-LOGIN FACEBOOK", getText('login', 'loginError'), error);
 				global.statusAccountBot = 'can\'t login';
 				if (facebookAccount.email && facebookAccount.password) {
 					return startBot(true);
@@ -701,10 +701,10 @@ async function startBot(loginWithEmail) {
 				if (global.GoatBot.config.dashBoard?.enable == true) {
 					try {
 						await require("../../dashboard/app.js")(null);
-						log.info("DASHBOARD", getText('login', 'openDashboardSuccess'));
+						log.info("BAYJID-DASHBOARD", getText('login', 'openDashboardSuccess'));
 					}
 					catch (err) {
-						log.err("DASHBOARD", getText('login', 'openDashboardError'), err);
+						log.err("BAYJID-DASHBOARD", getText('login', 'openDashboardError'), err);
 					}
 					return;
 				}
@@ -715,7 +715,7 @@ async function startBot(loginWithEmail) {
 
 			global.GoatBot.fcaApi = api;
 			global.GoatBot.botID = api.getCurrentUserID();
-			log.info("LOGIN FACEBOOK", getText('login', 'loginSuccess'));
+			log.info("BAYJID-LOGIN FACEBOOK", getText('login', 'loginSuccess'));
 			let hasBanned = false;
 			global.botID = api.getCurrentUserID();
 			logColor("#f5ab00", createLine("BOT INFO"));
@@ -786,10 +786,10 @@ async function startBot(loginWithEmail) {
 				changeFbStateByCode = true;
 				try {
 					writeFileSync(dirAccount, JSON.stringify(filterKeysAppState(api.getAppState()), null, 2));
-					log.info("REFRESH FBSTATE", getText('login', 'refreshFbstateSuccess', path.basename(dirAccount)));
+					log.info("BAYJID-REFRESH FBSTATE", getText('login', 'refreshFbstateSuccess', path.basename(dirAccount)));
 				}
 				catch (err) {
-					log.warn("REFRESH FBSTATE", getText('login', 'refreshFbstateError', path.basename(dirAccount)), err);
+					log.warn("BAYJID-REFRESH FBSTATE", getText('login', 'refreshFbstateError', path.basename(dirAccount)), err);
 				}
 				setTimeout(() => changeFbStateByCode = false, 1000);
 			}
@@ -862,14 +862,14 @@ async function startBot(loginWithEmail) {
 			}
 			// ——————————————————— DASHBOARD ——————————————————— //
 			if (global.GoatBot.config.dashBoard?.enable == true && dashBoardIsRunning == false) {
-				logColor('#f5ab00', createLine('DASHBOARD'));
+				logColor('#f5ab00', createLine('BAYJID-DASHBOARD'));
 				try {
 					await require("../../dashboard/app.js")(api);
-					log.info("DASHBOARD", getText('login', 'openDashboardSuccess'));
+					log.info("BAYJID-DASHBOARD", getText('login', 'openDashboardSuccess'));
 					dashBoardIsRunning = true;
 				}
 				catch (err) {
-					log.err("DASHBOARD", getText('login', 'openDashboardError'), err);
+					log.err("BAYJID-DASHBOARD", getText('login', 'openDashboardError'), err);
 				}
 			}
 			// ———————————————————— ADMIN BOT ———————————————————— //
@@ -881,15 +881,15 @@ async function startBot(loginWithEmail) {
 			for (const uid of adminBot) {
 				try {
 					const userName = await usersData.getName(uid);
-					log.master("ADMINBOT", `[${++i}] ${uid} | ${userName}`);
+					log.master("BAYJID-ADMINBOT", `[${++i}] ${uid} | ${userName}`);
 				}
 				catch (e) {
-					log.master("ADMINBOT", `[${++i}] ${uid}`);
+					log.master("BAYJID-ADMINBOT", `[${++i}] ${uid}`);
 				}
 			}
 			log.master("NOTIFICATION", (notification || "").trim());
 			log.master("SUCCESS", getText('login', 'runBot'));
-			log.master("LOAD TIME", `${convertTime(Date.now() - global.GoatBot.startTime)}`);
+			log.master("BAYJID-LOAD TIME", `${convertTime(Date.now() - global.GoatBot.startTime)}`);
 			logColor("#f5ab00", createLine("COPYRIGHT"));
 			// —————————————————— COPYRIGHT INFO —————————————————— //
 			// console.log(`\x1b[1m\x1b[33mCOPYRIGHT:\x1b[0m\x1b[1m\x1b[37m \x1b[0m\x1b[1m\x1b[36mProject GoatBot v2 created by ntkhang03 (https://github.com/ntkhang03), please do not sell this source code or claim it as your own. Thank you!\x1b[0m`);
@@ -907,11 +907,11 @@ async function startBot(loginWithEmail) {
 				if (error) {
 					global.responseUptimeCurrent = responseUptimeError;
 					if (
-						error.error == "Not logged in" ||
-						error.error == "Not logged in." ||
-						error.error == "Connection refused: Server unavailable"
+						error.error == "BAYJID-Not logged in" ||
+						error.error == "BAYJID-Not logged in." ||
+						error.error == "BAYJID-Connection refused: Server unavailable"
 					) {
-						log.err("NOT LOGGEG IN", getText('login', 'notLoggedIn'), error);
+						log.err("BAYJID-NOT LOGGEG IN", getText('login', 'notLoggedIn'), error);
 						global.responseUptimeCurrent = responseUptimeError;
 						global.statusAccountBot = 'can\'t login';
 						if (!isSendNotiErrorMessage) {
@@ -1101,13 +1101,13 @@ async function startBot(loginWithEmail) {
 							`localhost:${PORT}`}`;
 					nameUpTime.includes('localhost') && (nameUpTime = nameUpTime.replace('https', 'http'));
 					await server.listen(PORT);
-					log.info("UPTIME", getText('login', 'openServerUptimeSuccess', nameUpTime));
+					log.info("BAYJID-UPTIME", getText('login', 'openServerUptimeSuccess', nameUpTime));
 					if (global.GoatBot.config.serverUptime.socket?.enable == true)
 						require('./socketIO.js')(server);
 					global.serverUptimeRunning = true;
 				}
 				catch (err) {
-					log.err("UPTIME", getText('login', 'openServerUptimeError'), err);
+					log.err("BAYJID-UPTIME", getText('login', 'openServerUptimeError'), err);
 				}
 			}
 
