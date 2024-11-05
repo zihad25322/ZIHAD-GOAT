@@ -45,14 +45,14 @@ module.exports = async function (api, threadModel, userModel, dashBoardModel, gl
 		console.log(colors.hex("#f5ab00")(makeColor));
 
 		if (folderModules == "cmds") {
-			text = "command";
-			typeEnvCommand = "envCommands";
-			setMap = "commands";
+			text = "BAYJID-command";
+			typeEnvCommand = "BAYJID-envCommands";
+			setMap = "BAYJID-commands";
 		}
-		else if (folderModules == "events") {
-			text = "event command";
-			typeEnvCommand = "envEvents";
-			setMap = "eventCommands";
+		else if (folderModules == "BAYJID-events") {
+			text = "BAYJID-event command";
+			typeEnvCommand = "BAYJID-envEvents";
+			setMap = "BAYJID-eventCommands";
 		}
 
 		const fullPathModules = path.normalize(process.cwd() + `/scripts/${folderModules}`);
@@ -97,12 +97,12 @@ module.exports = async function (api, threadModel, userModel, dashBoardModel, gl
 									await exec(`npm install ${packageName} --${pathCommand.endsWith('.dev.js') ? 'no-save' : 'save'}`);
 									clearInterval(wating);
 									process.stderr.write('\r\x1b[K');
-									console.log(`${colors.green('✔')} installed package ${packageName} successfully`);
+									console.log(`${colors.green('✔')} BAYJID-installed package ${packageName} successfully`);
 								}
 								catch (err) {
 									clearInterval(wating);
 									process.stderr.write('\r\x1b[K');
-									console.log(`${colors.red('✖')} installed package ${packageName} failed`);
+									console.log(`${colors.red('✖')} BAYJID-installed package ${packageName} failed`);
 									throw new Error(`Can't install package ${packageName}`);
 								}
 							}
