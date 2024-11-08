@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "075j5d@rteet.com",
-    "password": "himi009",
+    "email": "",
+    "password": "",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -17,7 +17,7 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100001980810496"
+    "100005193854879"
   ],
   "whiteListMode": {
     "enable": false,
