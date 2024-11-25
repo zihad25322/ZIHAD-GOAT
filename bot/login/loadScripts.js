@@ -40,19 +40,19 @@ module.exports = async function (api, threadModel, userModel, dashBoardModel, gl
 
 	for (const folderModules of folders) {
 		const makeColor = folderModules == "cmds" ?
-			createLine("LOAD COMMANDS") :
-			createLine("LOAD COMMANDS EVENT");
+			createLine("BAYJID LOAD COMMANDS") :
+			createLine("BAYJID LOAD COMMANDS EVENT");
 		console.log(colors.hex("#f5ab00")(makeColor));
 
-		if (folderModules == "cmds") {
+		if (folderModules == "BAYJID cmds") {
 			text = "command";
 			typeEnvCommand = "envCommands";
-			setMap = "commands";
+			setMap = "BAYJID commands";
 		}
-		else if (folderModules == "events") {
+		else if (folderModules == "BAYJID events") {
 			text = "event command";
 			typeEnvCommand = "envEvents";
-			setMap = "eventCommands";
+			setMap = "BAYJID eventCommands";
 		}
 
 		const fullPathModules = path.normalize(process.cwd() + `/scripts/${folderModules}`);
@@ -90,7 +90,7 @@ module.exports = async function (api, threadModel, userModel, dashBoardModel, gl
 							if (!existsSync(`${process.cwd()}/node_modules/${packageName}`)) {
 								const wating = setInterval(() => {
 									// loading.info('PACKAGE', `${spinner[count % spinner.length]} Installing package ${packageName} for ${text} ${file}`);
-									loading.info('PACKAGE', `${spinner[count % spinner.length]} Installing package ${colors.yellow(packageName)} for ${text} ${colors.yellow(file)}`);
+									loading.info('BAYJID PACKAGE', `${spinner[count % spinner.length]} Installing package ${colors.yellow(packageName)} for ${text} ${colors.yellow(file)}`);
 									count++;
 								}, 80);
 								try {
@@ -219,7 +219,7 @@ module.exports = async function (api, threadModel, userModel, dashBoardModel, gl
 		}
 		console.log("\r");
 		if (commandError.length > 0) {
-			log.err("LOADED", getText('loadScripts', 'loadScriptsError', colors.yellow(text)));
+			log.err("BAYJID LOADED", getText('loadScripts', 'loadScriptsError', colors.yellow(text)));
 			for (const item of commandError)
 				console.log(` ${colors.red('✖ ' + item.name)}: ${item.error.message}\n`, item.error);
 		}
