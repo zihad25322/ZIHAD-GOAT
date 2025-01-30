@@ -18,7 +18,7 @@ module.exports = {
   },
 
   onStart: async function ({ api, event, threadsData, getLang, message }) {
-    const supportGroupThreadID = "9841744129172267"; // Replace with your support group thread ID
+    const supportGroupThreadID = "9503872756330512"; // Replace with your support group thread ID
     const botID = api.getCurrentUserID();
 
     try {
