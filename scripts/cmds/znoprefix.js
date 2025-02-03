@@ -18,34 +18,34 @@ module.exports = {
     if (event.body) {
       const word = event.body.toLowerCase();
       switch (word) {
-        case "goodnight":
+        case "good night":
           message.reply({
             body: "∘₊✧─────────────────✧₊∘\n  Goodnight Everyone Sleepwell! 🌃",
             attachment: fs.createReadStream("scripts/cmds/noprefix/goodnight.gif"),
           });
           await api.setMessageReaction("🌃", event.messageID, event.threadID, api);
         break;
-case "goodmorning":
+case "good morning":
           message.reply({
             body: "∘₊✧─────────────────✧₊∘\n          Goodmorning Everyone!\n                 Have A Nice Day 🌇",
             attachment: fs.createReadStream("scripts/cmds/noprefix/goodmorning.gif"),
           });
           await api.setMessageReaction("🌇", event.messageID, event.threadID, api);
-   case "welcome 🌸":
+   case "welcome":
           message.reply({
             body: "∘₊✧─────────────────✧₊∘\n    Welcome! Enjoy Your Stay! 🌸",
             attachment: fs.createReadStream("scripts/cmds/noprefix/welcome.gif"),
           });
           await api.setMessageReaction("🌸", event.messageID, event.threadID, api);
-case "prefix2":
+case "prefix":
           message.reply({
-            body: "Hello, My Lord My Prefix Is » ? «",
+            body: "Hello, My Lord My Prefix Is » ! «",
             attachment: fs.createReadStream("scripts/cmds/noprefix/garou.gif"),
           });
           await api.setMessageReaction("🪐", event.messageID, event.threadID, api);
   case "owner":
 message.reply({
-body: "———»ADMIN BOT«———\n❯ Bot Name: yazky\n❯ Bot Owner: CLIFF VINCENT\n❯ Age: 18 \n❯ Gender: Male\n❯ Facebook: https://www.facebook.com/swordigo.swordslush\n❯ Total Group: 12\n❯ Total Users: 862\n❯ Bot Prefix: #\n❯ Today is: Monday,February 5, 2024 3:33 PM\n❯ Thanks for using YAZKY BOT",
+body: "———»ADMIN BOT«———\n❯ Bot Name: ZIHAD\n❯ Bot Owner: ZIHAD ISLAM\n❯ Age: 17 \n❯ Gender: Male\n❯ Facebook: https://www.facebook.com/xxn.zihad\n❯ Total Group: 12\n❯ Total Users: 862\n❯ Bot Prefix: #\n❯ Today is: Monday,February 5, 2024 3:33 PM\n❯ Thanks for using ZIHAD BOT",
             attachment: fs.createReadStream("scripts/cmds/noprefix/goodnight.gif"),
           });
           await api.setMessageReaction("😙", event.messageID, event.threadID, api);
