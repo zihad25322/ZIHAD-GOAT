@@ -15,6 +15,6 @@ onChat: async function({
     message,
     getLang
 }) {
-    if (event.body && event.body.toLowerCase() == "khilay?") return message.reply("My Lord Im Still Here, Ask Me Anything ✨");
+    if (event.body && event.body.toLowerCase() == "zihad?") return message.reply("My Lord Im Still Here, Ask Me Anything ✨");
 }
 };
