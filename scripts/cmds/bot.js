@@ -55,7 +55,7 @@ module.exports = {
 
       const msg = args.join(" ").trim();
       if (!msg) {
-        return api.sendMessage("hello love, how can i help you?", "কথা দাও,হাত ছেড়ে দিলে পা ধরে রাখবা..😞", event.threadID, event.messageID);
+        return api.sendMessage("hello love, how can i help you?", event.threadID, event.messageID);
       }
 
       if (args[0].toLowerCase() === "teach") {
