@@ -5,7 +5,7 @@ const obfuscatedAuthor = String.fromCharCode(65, 110, 116, 104, 111, 110, 121);
 module.exports = {
   config: {
     name: "jan",
-    aliases: ["janu", "sadiya"],
+    aliases: ["janu", "sadiya"," sadu,"jihu"],
     version: "1.0",
     author: "Anthony",
     countDown: 5,
@@ -55,7 +55,7 @@ module.exports = {
 
       const msg = args.join(" ").trim();
       if (!msg) {
-        return api.sendMessage("𝘏𝘦𝘭𝘭𝘰 𝘐𝘮 𝘙𝘈𝘕𝘈 𝘉𝘰𝘵.\n\n𝘏𝘰𝘸 𝘊𝘢𝘯 𝘐 𝘈𝘴𝘴𝘪𝘴𝘵 𝘠𝘰𝘶..? ", event.threadID, event.messageID);
+        return api.sendMessage("hello love, how can i help you?","কথা দাও,হাত ছেড়ে দিলে পা ধরে রাখবা..😞", event.threadID, event.messageID);
       }
 
       if (args[0].toLowerCase() === "teach") {
