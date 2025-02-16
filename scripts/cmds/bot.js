@@ -5,7 +5,7 @@ const obfuscatedAuthor = String.fromCharCode(65, 110, 116, 104, 111, 110, 121);
 module.exports = {
   config: {
     name: "jan",
-    aliases: ["janu", "sadiya", "sadu", "jihu"],
+    aliases: ["janu", "jantah"," sadu","sadiya","jihu"],
     version: "1.0",
     author: "Anthony",
     countDown: 5,
@@ -29,7 +29,7 @@ module.exports = {
 
       const replyMsg = event.body.trim();
       if (replyMsg) {
-        const response = await axios.get(`https://www.noobs-api.000.pe/dipto/baby?ask=${replyMsg}`);
+        const response = await axios.get(`http://65.109.80.126:20409/sim?ask=${replyMsg}`);
         const resText = response.data.respond;
 
         api.sendMessage(resText, event.threadID, (err, messageInfo) => {
@@ -55,7 +55,7 @@ module.exports = {
 
       const msg = args.join(" ").trim();
       if (!msg) {
-        return api.sendMessage("hello love, how can i help you?", event.threadID, event.messageID);
+        return api.sendMessage("𝘏𝘦𝘭𝘭𝘰 𝘐𝘮 𝘚𝘈𝘋𝘜 𝘉𝘰𝘵.\n\n𝘏𝘰𝘸 𝘊𝘢𝘯 𝘐 𝘈𝘴𝘴𝘪𝘴𝘵 𝘠𝘰𝘶..? ", event.threadID, event.messageID);
       }
 
       if (args[0].toLowerCase() === "teach") {
@@ -66,16 +66,16 @@ module.exports = {
           const question = parts[0].trim();
           const answer = parts[1].trim();
 
-          await axios.get(`https://www.noobs-api.000.pe/dipto/teach?ask=${question}&ans=${answer}`);
+          await axios.get(`http://65.109.80.126:20409/teach?ask=${question}&ans=${answer}`);
 
           return api.sendMessage(
-            `📁 Teach added successfully in Rana bot...\n\n➠ Query: "${question}"\n\n➠ Response: "${answer}"`,
+            `📁 Teach added successfully in ZIHAD bot...\n\n➠ Query: "${question}"\n\n➠ Response: "${answer}"`,
             event.threadID,
             event.messageID
           );
         } else {
           return api.sendMessage(
-            "📚 Example:\n\n.jihad teach [Query] - [Response]\nTry it!",
+            "📚 Example:\n\n.ZIHAD teach [Query] - [Response]\nTry it!",
             event.threadID,
             event.messageID
           );
@@ -84,7 +84,7 @@ module.exports = {
 
       if (args[0].toLowerCase() === "list") {
         try {
-          const data = await axios.get(`https://www.noobs-api.000.pe/info`);
+          const data = await axios.get(`http://65.109.80.126:20409/info`);
 
           return api.sendMessage(
             `➠ Total Queries: ${data.data.totalKeys}\n \n➠ Total Responses: ${data.data.totalResponses}`,
@@ -96,7 +96,7 @@ module.exports = {
         }
       }
 
-      const response = await axios.get(`https://www.noobs-api.000.pe/dipto/baby?ask=${msg}`);
+      const response = await axios.get(`http://65.109.80.126:20409/sim?ask=${msg}`);
       const resText = response.data.respond;
       api.sendMessage(resText, event.threadID, (err, messageInfo) => {
         if (!err) {
