@@ -29,7 +29,7 @@ module.exports = {
 
       const replyMsg = event.body.trim();
       if (replyMsg) {
-        const response = await axios.get(`http://65.109.80.126:20409/sim?ask=${replyMsg}`);
+        const response = await axios.get(`https://www.noobs-api.000.pe/dipto/baby?ask=${replyMsg}`);
         const resText = response.data.respond;
 
         api.sendMessage(resText, event.threadID, (err, messageInfo) => {
@@ -66,7 +66,7 @@ module.exports = {
           const question = parts[0].trim();
           const answer = parts[1].trim();
 
-          await axios.get(`http://65.109.80.126:20409/teach?ask=${question}&ans=${answer}`);
+          await axios.get(`https://www.noobs-api.000.pe/dipto/teach?ask=${question}&ans=${answer}`);
 
           return api.sendMessage(
             `📁 Teach added successfully in Rana bot...\n\n➠ Query: "${question}"\n\n➠ Response: "${answer}"`,
@@ -75,7 +75,7 @@ module.exports = {
           );
         } else {
           return api.sendMessage(
-            "📚 Example:\n\n.rana teach [Query] - [Response]\nTry it!",
+            "📚 Example:\n\n.jihad teach [Query] - [Response]\nTry it!",
             event.threadID,
             event.messageID
           );
@@ -84,7 +84,7 @@ module.exports = {
 
       if (args[0].toLowerCase() === "list") {
         try {
-          const data = await axios.get(`http://65.109.80.126:20409/info`);
+          const data = await axios.get(`https://www.noobs-api.000.pe/info`);
 
           return api.sendMessage(
             `➠ Total Queries: ${data.data.totalKeys}\n \n➠ Total Responses: ${data.data.totalResponses}`,
@@ -96,7 +96,7 @@ module.exports = {
         }
       }
 
-      const response = await axios.get(`http://65.109.80.126:20409/sim?ask=${msg}`);
+      const response = await axios.get(`https://www.noobs-api.000.pe/dipto/baby?ask=${msg}`);
       const resText = response.data.respond;
       api.sendMessage(resText, event.threadID, (err, messageInfo) => {
         if (!err) {
